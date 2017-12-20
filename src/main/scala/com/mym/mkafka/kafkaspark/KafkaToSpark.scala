@@ -22,7 +22,7 @@ object KafkaToSpark extends App {
   val message: InputDStream[(String, String)] =
     KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](ssc, kafkaPararms, topics)
 
-  val sensorData = message.map(x => x + "********spark")
+  val sensorData = message.map(x => x + "********spark++")
 
   sensorData.foreachRDD(println(_))
 
