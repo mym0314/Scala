@@ -1,6 +1,6 @@
 package com.mym.mkafka.kafkaspark
 
-import kafka.serializer.StringDecoder
+import io.netty.handler.codec.string.StringDecoder
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.dstream.InputDStream
 import org.apache.spark.streaming.kafka.KafkaUtils
