@@ -1,6 +1,6 @@
 package com.mym.rdd
 
-import org.apache.spark.sql.SparkSession;
+import org.apache.spark.sql.SparkSession
 
 object BroadcastTest {
   def main(args: Array[String]): Unit = {
