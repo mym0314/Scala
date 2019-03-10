@@ -27,6 +27,7 @@ object DFSReadWriteTest {
   }
 
   private def parseArgs(args: Array[String]): Unit = {
+    println(args.length + "*****"+args(0)+"*****"+args(1))
     if (args.length != NPARAMS) {
       printUsage()
       System.exit(1)
@@ -34,9 +35,9 @@ object DFSReadWriteTest {
 
     var i = 0
 
-    localFilePath = new File(args(i))
+    localFilePath = new File(args(0))
     if (!localFilePath.exists) {
-      System.err.println("Given path (" + args(i) + ") does not exist.\n")
+      println("Given path (" + args(i) + ") does not exist.\n")
       printUsage()
       System.exit(1)
     }
@@ -48,7 +49,7 @@ object DFSReadWriteTest {
     }
 
     i += 1
-    dfsDirPath = args(i)
+    dfsDirPath = args(1)
   }
 
   def runLocalWordCount(fileContents: List[String]): Int = {
@@ -77,7 +78,7 @@ object DFSReadWriteTest {
       .getOrCreate()
 
     println("Writing local file to DFS")
-    val dfsFilename = dfsDirPath + "/dfs_read_write_test"
+    val dfsFilename = "hdfs://mycluster/user/root"+ "/dfs_read_write_test1"
     val fileRDD = spark.sparkContext.parallelize(fileContents)
     fileRDD.saveAsTextFile(dfsFilename)
 
