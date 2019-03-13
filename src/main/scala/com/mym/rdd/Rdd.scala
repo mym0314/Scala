@@ -5,7 +5,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object Rdd {
 
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("RDD").setMaster("local")
+    val conf = new SparkConf().setAppName("RDD").setMaster("yarn")
     val sc = new SparkContext(conf)
     //Map
     val array = Array(1,2,3,4,5,6,7,8)
