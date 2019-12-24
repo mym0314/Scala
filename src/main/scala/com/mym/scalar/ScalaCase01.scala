@@ -16,7 +16,7 @@ object ScalaCase01 {
 //      map + (kv._1->(kv._2+ map.getOrElse(kv._1,0)))
 //    })
 
-   map02.filter{case (k,_)=> k.toString.contains("香")}.foreach(println)
+    map02.filter{case (k,_)=> k.toString.contains("香")}.foreach(println)
     map01.foreach(println)
   }
 
