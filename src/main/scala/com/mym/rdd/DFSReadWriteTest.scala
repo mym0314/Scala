@@ -87,7 +87,7 @@ object DFSReadWriteTest {
     val dfsWordCount = readFileRDD
       .flatMap(_.split(" "))
       .flatMap(_.split("\t"))
-      .filter(_.nonEmpty)
+      .filter(_.nonEmpty) 
       .map(w => (w, 1))
       .countByKey()
       .values
