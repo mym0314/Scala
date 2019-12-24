@@ -38,7 +38,7 @@ object Rdd {
     val mFlatMap = sc.parallelize(1 to 10)
     val mFlatResult = mFlatMap.flatMap(x => 1 to x)
 
-    mFlatResult.foreach(print(_));
+    mFlatResult.foreach(print(_))
 
 
 
