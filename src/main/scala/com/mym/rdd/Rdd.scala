@@ -40,9 +40,6 @@ object Rdd {
 
     mFlatResult.foreach(print(_))
 
-
-
-
     sc.stop()
   }
 

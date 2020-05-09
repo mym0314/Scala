@@ -1,8 +1,5 @@
 package com.mym.mkafka.kafkaspark
 
-
-
-
 import kafka.serializer.StringDecoder
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.dstream.InputDStream

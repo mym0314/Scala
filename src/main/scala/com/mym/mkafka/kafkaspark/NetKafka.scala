@@ -4,6 +4,7 @@ package com.mym.mkafka.kafkaspark
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.SparkConf
+import org.apache.spark.streaming.kafka.KafkaUtils
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 object NetKafka {
@@ -18,13 +19,20 @@ object NetKafka {
       ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG -> classOf[StringDeserializer],
       ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG -> classOf[StringDeserializer])
     ssc.checkpoint("hdfs://hadoop:9000/data")
-    //    val topics = Array("topicD")
-    //        val stream = KafkaUtils.createDirectStream[String, String](
-    //          ssc,
-    //          LocationStrategies.PreferConsistent,PreferConsistent
-    //          ConsumerStrategies.Subscribe[String, String](topics, kafkaParams))
-    //        val lines=stream.map(_.value)
-    //        val word=lines.flatMap(_.split(",")).map(x=>(x,1)).reduceByKey(_+_).print
+    val topics = Array("topicD")
+//    KafkaUtils.createDirectStream(ssc,
+//      LocationStrategies.PreferConsistent, PreferConsistent
+//        ConsumerStrategies.Subscribe[String, String](topics, kafkaParams)
+//    );
+//
+//    val stream = KafkaUtils.createDirectStream[String, String](
+//      ssc,
+//      LocationStrategies.PreferConsistent, PreferConsistent
+//        ConsumerStrategies.Subscribe[String, String](topics, kafkaParams)
+//    )
+//    val lines = stream.map(_.value)
+//    val word = lines.flatMap(_.split(",")).map(x => (x, 1)).reduceByKey(_ + _).print
+//    )
 
     ssc.start()
     ssc.awaitTermination()

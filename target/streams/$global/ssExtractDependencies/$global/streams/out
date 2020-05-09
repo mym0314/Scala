@@ -1,0 +1,122 @@
+sbt.ResolveException: download failed: org.scala-lang#scala-library;2.11.12!scala-library.jar
+download failed: org.apache.spark#spark-core_2.11;2.4.4!spark-core_2.11.jar
+download failed: org.apache.httpcomponents#httpcore;4.2.4!httpcore.jar
+download failed: org.apache.hadoop#hadoop-mapreduce-client-common;2.7.4!hadoop-mapreduce-client-common.jar
+download failed: org.apache.hadoop#hadoop-yarn-common;2.7.4!hadoop-yarn-common.jar
+download failed: org.apache.hadoop#hadoop-yarn-client;2.7.4!hadoop-yarn-client.jar
+download failed: org.apache.hadoop#hadoop-yarn-server-common;2.7.4!hadoop-yarn-server-common.jar
+download failed: org.apache.hadoop#hadoop-mapreduce-client-shuffle;2.7.4!hadoop-mapreduce-client-shuffle.jar
+download failed: org.apache.spark#spark-sql_2.11;2.4.4!spark-sql_2.11.jar
+download failed: com.univocity#univocity-parsers;2.7.3!univocity-parsers.jar
+download failed: org.apache.spark#spark-sketch_2.11;2.4.4!spark-sketch_2.11.jar
+download failed: org.apache.spark#spark-catalyst_2.11;2.4.4!spark-catalyst_2.11.jar
+download failed: org.scala-lang.modules#scala-parser-combinators_2.11;1.1.0!scala-parser-combinators_2.11.jar(bundle)
+download failed: org.codehaus.janino#janino;3.0.9!janino.jar
+download failed: org.codehaus.janino#commons-compiler;3.0.9!commons-compiler.jar
+download failed: org.antlr#antlr4-runtime;4.7!antlr4-runtime.jar
+download failed: org.apache.orc#orc-core;1.5.5!orc-core.jar
+download failed: org.apache.orc#orc-shims;1.5.5!orc-shims.jar
+download failed: io.airlift#aircompressor;0.10!aircompressor.jar
+download failed: org.apache.orc#orc-mapreduce;1.5.5!orc-mapreduce.jar
+download failed: org.apache.parquet#parquet-column;1.10.1!parquet-column.jar
+download failed: org.apache.parquet#parquet-common;1.10.1!parquet-common.jar
+download failed: org.apache.parquet#parquet-format;2.4.0!parquet-format.jar
+download failed: org.apache.parquet#parquet-encoding;1.10.1!parquet-encoding.jar
+download failed: org.apache.parquet#parquet-hadoop;1.10.1!parquet-hadoop.jar
+download failed: org.apache.parquet#parquet-jackson;1.10.1!parquet-jackson.jar
+download failed: org.apache.arrow#arrow-vector;0.10.0!arrow-vector.jar
+download failed: org.apache.arrow#arrow-format;0.10.0!arrow-format.jar
+download failed: com.vlkan#flatbuffers;1.2.0-3f79e055!flatbuffers.jar
+download failed: org.apache.arrow#arrow-memory;0.10.0!arrow-memory.jar
+download failed: com.google.code.findbugs#jsr305;3.0.2!jsr305.jar
+download failed: joda-time#joda-time;2.9.9!joda-time.jar
+download failed: com.fasterxml.jackson.core#jackson-core;2.7.9!jackson-core.jar(bundle)
+download failed: com.carrotsearch#hppc;0.7.2!hppc.jar(bundle)
+download failed: org.apache.hadoop#hadoop-yarn-server-nodemanager;2.7.4!hadoop-yarn-server-nodemanager.jar
+download failed: org.scala-lang#scala-compiler;2.11.12!scala-compiler.jar
+	at sbt.IvyActions$.sbt$IvyActions$$resolve(IvyActions.scala:313)
+	at sbt.IvyActions$$anonfun$updateEither$1.apply(IvyActions.scala:191)
+	at sbt.IvyActions$$anonfun$updateEither$1.apply(IvyActions.scala:168)
+	at sbt.IvySbt$Module$$anonfun$withModule$1.apply(Ivy.scala:156)
+	at sbt.IvySbt$Module$$anonfun$withModule$1.apply(Ivy.scala:156)
+	at sbt.IvySbt$$anonfun$withIvy$1.apply(Ivy.scala:133)
+	at sbt.IvySbt.sbt$IvySbt$$action$1(Ivy.scala:57)
+	at sbt.IvySbt$$anon$4.call(Ivy.scala:65)
+	at xsbt.boot.Locks$GlobalLock.withChannel$1(Locks.scala:95)
+	at xsbt.boot.Locks$GlobalLock.xsbt$boot$Locks$GlobalLock$$withChannelRetries$1(Locks.scala:80)
+	at xsbt.boot.Locks$GlobalLock$$anonfun$withFileLock$1.apply(Locks.scala:99)
+	at xsbt.boot.Using$.withResource(Using.scala:10)
+	at xsbt.boot.Using$.apply(Using.scala:9)
+	at xsbt.boot.Locks$GlobalLock.ignoringDeadlockAvoided(Locks.scala:60)
+	at xsbt.boot.Locks$GlobalLock.withLock(Locks.scala:50)
+	at xsbt.boot.Locks$.apply0(Locks.scala:31)
+	at xsbt.boot.Locks$.apply(Locks.scala:28)
+	at sbt.IvySbt.withDefaultLogger(Ivy.scala:65)
+	at sbt.IvySbt.withIvy(Ivy.scala:128)
+	at sbt.IvySbt.withIvy(Ivy.scala:125)
+	at sbt.IvySbt$Module.withModule(Ivy.scala:156)
+	at sbt.IvyActions$.updateEither(IvyActions.scala:168)
+	at sbt.Classpaths$$anonfun$sbt$Classpaths$$work$1$1.apply(Defaults.scala:1541)
+	at sbt.Classpaths$$anonfun$sbt$Classpaths$$work$1$1.apply(Defaults.scala:1537)
+	at sbt.Classpaths$$anonfun$doWork$1$1$$anonfun$121.apply(Defaults.scala:1572)
+	at sbt.Classpaths$$anonfun$doWork$1$1$$anonfun$121.apply(Defaults.scala:1570)
+	at sbt.Tracked$$anonfun$lastOutput$1.apply(Tracked.scala:37)
+	at sbt.Classpaths$$anonfun$doWork$1$1.apply(Defaults.scala:1575)
+	at sbt.Classpaths$$anonfun$doWork$1$1.apply(Defaults.scala:1569)
+	at sbt.Tracked$$anonfun$inputChanged$1.apply(Tracked.scala:60)
+	at sbt.Classpaths$.cachedUpdate(Defaults.scala:1592)
+	at sbt.Classpaths$$anonfun$updateTask$1.apply(Defaults.scala:1519)
+	at sbt.Classpaths$$anonfun$updateTask$1.apply(Defaults.scala:1471)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:237)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[error] (*:ssExtractDependencies) sbt.ResolveException: download failed: org.scala-lang#scala-library;2.11.12!scala-library.jar
+[error] download failed: org.apache.spark#spark-core_2.11;2.4.4!spark-core_2.11.jar
+[error] download failed: org.apache.httpcomponents#httpcore;4.2.4!httpcore.jar
+[error] download failed: org.apache.hadoop#hadoop-mapreduce-client-common;2.7.4!hadoop-mapreduce-client-common.jar
+[error] download failed: org.apache.hadoop#hadoop-yarn-common;2.7.4!hadoop-yarn-common.jar
+[error] download failed: org.apache.hadoop#hadoop-yarn-client;2.7.4!hadoop-yarn-client.jar
+[error] download failed: org.apache.hadoop#hadoop-yarn-server-common;2.7.4!hadoop-yarn-server-common.jar
+[error] download failed: org.apache.hadoop#hadoop-mapreduce-client-shuffle;2.7.4!hadoop-mapreduce-client-shuffle.jar
+[error] download failed: org.apache.spark#spark-sql_2.11;2.4.4!spark-sql_2.11.jar
+[error] download failed: com.univocity#univocity-parsers;2.7.3!univocity-parsers.jar
+[error] download failed: org.apache.spark#spark-sketch_2.11;2.4.4!spark-sketch_2.11.jar
+[error] download failed: org.apache.spark#spark-catalyst_2.11;2.4.4!spark-catalyst_2.11.jar
+[error] download failed: org.scala-lang.modules#scala-parser-combinators_2.11;1.1.0!scala-parser-combinators_2.11.jar(bundle)
+[error] download failed: org.codehaus.janino#janino;3.0.9!janino.jar
+[error] download failed: org.codehaus.janino#commons-compiler;3.0.9!commons-compiler.jar
+[error] download failed: org.antlr#antlr4-runtime;4.7!antlr4-runtime.jar
+[error] download failed: org.apache.orc#orc-core;1.5.5!orc-core.jar
+[error] download failed: org.apache.orc#orc-shims;1.5.5!orc-shims.jar
+[error] download failed: io.airlift#aircompressor;0.10!aircompressor.jar
+[error] download failed: org.apache.orc#orc-mapreduce;1.5.5!orc-mapreduce.jar
+[error] download failed: org.apache.parquet#parquet-column;1.10.1!parquet-column.jar
+[error] download failed: org.apache.parquet#parquet-common;1.10.1!parquet-common.jar
+[error] download failed: org.apache.parquet#parquet-format;2.4.0!parquet-format.jar
+[error] download failed: org.apache.parquet#parquet-encoding;1.10.1!parquet-encoding.jar
+[error] download failed: org.apache.parquet#parquet-hadoop;1.10.1!parquet-hadoop.jar
+[error] download failed: org.apache.parquet#parquet-jackson;1.10.1!parquet-jackson.jar
+[error] download failed: org.apache.arrow#arrow-vector;0.10.0!arrow-vector.jar
+[error] download failed: org.apache.arrow#arrow-format;0.10.0!arrow-format.jar
+[error] download failed: com.vlkan#flatbuffers;1.2.0-3f79e055!flatbuffers.jar
+[error] download failed: org.apache.arrow#arrow-memory;0.10.0!arrow-memory.jar
+[error] download failed: com.google.code.findbugs#jsr305;3.0.2!jsr305.jar
+[error] download failed: joda-time#joda-time;2.9.9!joda-time.jar
+[error] download failed: com.fasterxml.jackson.core#jackson-core;2.7.9!jackson-core.jar(bundle)
+[error] download failed: com.carrotsearch#hppc;0.7.2!hppc.jar(bundle)
+[error] download failed: org.apache.hadoop#hadoop-yarn-server-nodemanager;2.7.4!hadoop-yarn-server-nodemanager.jar
+[error] download failed: org.scala-lang#scala-compiler;2.11.12!scala-compiler.jar
